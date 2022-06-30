@@ -2,7 +2,7 @@
 var spy = new Gumshoe('nav a');
 // Burger
 $('.burger').on('click', function (event) {
-    $('.navigation-bar').slideToggle('200');
+    $('.nav-bar').slideToggle('200');
     $('.toggle-open').toggleClass('open');
     $('.toggle-close').toggleClass('close');
 })
@@ -19,7 +19,6 @@ $(document).ready(function () {
         }
     });
 });
-
 // Scroll to TOP
 var btn = $('.scrollup');
 $(window).scroll(function () {
@@ -33,14 +32,17 @@ btn.on('click', function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, '500');
 });
-
 // Reveal animation
-// const sr = ScrollReveal({
-//     origin: 'top',
-//     distance: '20px',
-//     duration: 1500,
-//     reset: true
-// });
-// ScrollReveal().reveal('.col, .aboutus-img, .img-col', { origin: 'left' });
-// ScrollReveal().reveal('.aboutus-content, .home-image', { origin: 'right' });
-// ScrollReveal().reveal('.product-item, .brand-wrapper, .newsletter-wrapper', { interval: 100 });
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '20px',
+    duration: 1500,
+    reset: true
+});
+ScrollReveal().reveal('.col, .aboutus-img, .img-col', { origin: 'left' });
+ScrollReveal().reveal('.aboutus-content, .home-image', { origin: 'right' });
+ScrollReveal().reveal('.product-item, .brand-wrapper, .newsletter-wrapper', { interval: 100 });
+
+
+
+
